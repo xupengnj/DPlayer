@@ -67,6 +67,8 @@ class Template {
         this.controller = this.container.querySelector('.dplayer-controller');
         this.commentInput = this.container.querySelector('.dplayer-comment-input');
         this.commentButton = this.container.querySelector('.dplayer-comment-icon');
+        this.widthScreenButton = this.container.querySelector('.dplayer-widthscreen-icon');
+        this.nextVideoButton = this.container.querySelector('.dplayer-nextvideo-icon');
         this.commentSettingBox = this.container.querySelector('.dplayer-comment-setting-box');
         this.commentSettingButton = this.container.querySelector('.dplayer-comment-setting-icon');
         this.commentSettingFill = this.container.querySelector('.dplayer-comment-setting-icon path');
@@ -74,7 +76,7 @@ class Template {
         this.commentSendFill = this.container.querySelector('.dplayer-send-icon path');
         this.commentColorSettingBox = this.container.querySelector('.dplayer-comment-setting-color');
         this.browserFullButton = this.container.querySelector('.dplayer-full-icon');
-        this.webFullButton = this.container.querySelector('.dplayer-full-in-icon');
+        this.webFullButton = this.container.querySelector('.√');
         this.menu = this.container.querySelector('.dplayer-menu');
         this.menuItem = this.container.querySelectorAll('.dplayer-menu-item');
         this.qualityList = this.container.querySelector('.dplayer-quality-list');

@@ -6,6 +6,11 @@
         <img src="{{ options.logo }}">
     </div>
     {{ /if }}
+
+// <div class='dplayer-title'>
+
+</div>
+
     <div class="dplayer-danmaku"{{ if options.danmaku && options.danmaku.bottm }} style="margin-bottom:{{ options.danmaku.bottm }}"{{ /if }}>
         <div class="dplayer-danmaku-item dplayer-danmaku-item--demo"></div>
     </div>
@@ -77,6 +82,12 @@
         <button class="dplayer-icon dplayer-play-icon">
             <span class="dplayer-icon-content">{{@ icons.play }}</span>
         </button>
+
+        {{if options.video.hasNextVideo}}
+        <button class="dplayer-icon dplayer-nextvideo-icon">
+            <span class="dplayer-icon-content">{{@ icons.nextvideo }}</span>//下一个按钮
+        </button>
+        {{/if}}
         <div class="dplayer-volume">
             <button class="dplayer-icon dplayer-volume-icon">
                 <span class="dplayer-icon-content">{{@ icons.volumeDown }}</span>
@@ -125,6 +136,7 @@
                 <span class="dplayer-icon-content">{{@ icons.comment }}</span>
             </button>
         </div>
+   
         {{ if options.subtitle }}
         <div class="dplayer-subtitle-btn">
             <button class="dplayer-icon dplayer-subtitle-icon" data-balloon="{{ tran('Hide subtitle') }}" data-balloon-pos="up">
@@ -132,6 +144,9 @@
             </button>
         </div>
         {{ /if }}
+
+    
+
         <div class="dplayer-setting">
             <button class="dplayer-icon dplayer-setting-icon" data-balloon="{{ tran('Setting') }}" data-balloon-pos="up">
                 <span class="dplayer-icon-content">{{@ icons.setting }}</span>
@@ -183,10 +198,12 @@
                 </div>
             </div>
         </div>
+
+        <div class="dplayer-icon dplayer-widthscreen-icon" data-balloon="{{ tran('width screen') }}" data-balloon-pos="up">
+            <span class="dplayer-icon-content">{{@ icons.widthscreen }}</span>
+        </div>
+
         <div class="dplayer-full">
-            <button class="dplayer-icon dplayer-full-in-icon" data-balloon="{{ tran('Web full screen') }}" data-balloon-pos="up">
-                <span class="dplayer-icon-content">{{@ icons.fullWeb }}</span>
-            </button>
             <button class="dplayer-icon dplayer-full-icon" data-balloon="{{ tran('Full screen') }}" data-balloon-pos="up">
                 <span class="dplayer-icon-content">{{@ icons.full }}</span>
             </button>

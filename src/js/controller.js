@@ -31,6 +31,7 @@ class Controller {
         this.initSubtitleButton();
         this.initHighlights();
         this.initAirplayButton();
+        this.goNextVideo();
         if (!utils.isMobile) {
             this.initVolumeButton();
         }
@@ -58,6 +59,14 @@ class Controller {
             });
             this.player.template.controllerMask.addEventListener('click', () => {
                 this.toggle();
+            });
+        }
+    }
+
+    goNextVideo() {
+        if (this.player.options.video.hasNextVideo) {
+            this.player.template.nextVideoButton.addEventListener('click', () => {
+                this.player.options.video.goNextVideo && this.player.options.video.goNextVideo();
             });
         }
     }
@@ -172,7 +181,7 @@ class Controller {
             this.player.fullScreen.toggle('browser');
         });
 
-        this.player.template.webFullButton.addEventListener('click', () => {
+        this.player.template.widthScreenButton.addEventListener('click', () => {
             this.player.fullScreen.toggle('web');
         });
     }
