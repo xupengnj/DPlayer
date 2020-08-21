@@ -75,7 +75,7 @@ class Controller {
     followOperate() {
         if (this.player.options.video.logo && this.player.options.video.portrait) {
             this.player.template.followButton.addEventListener('click', () => {
-                this.player.options.video.followOperate&&this.player.options.video.followOperate();
+                this.player.options.video.followOperate && this.player.options.video.followOperate();
             });
         }
     }
