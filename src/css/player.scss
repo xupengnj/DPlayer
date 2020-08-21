@@ -3,6 +3,7 @@
     overflow: hidden;
     user-select: none;
     line-height: 1;
+ 
 
     * {
         box-sizing: content-box;
@@ -56,8 +57,14 @@
                 display: none;
             }
         }
+        .dplayer-title{
+            display: none;
+        }
 
         .dplayer-controller .dplayer-icons .dplayer-comment {
+            display: none;
+        }
+        .dplayer-title{
             display: none;
         }
 
@@ -108,12 +115,17 @@
             .dplayer-controller {
                 opacity: 0;
             }
-
+            .dplayer-title{
+                opacity: 0;
+            }
             &:hover {
                 .dplayer-controller-mask {
                     opacity: 1;
                 }
                 .dplayer-controller {
+                    opacity: 1;
+                }
+                .dplayer-title{
                     opacity: 1;
                 }
             }
@@ -145,12 +157,19 @@
             opacity: 0;
             transform: translateY(100%);
         }
+        .dplayer-title{
+            opacity: 0;
+            transform: translateY(-100%);
+        }
     }
     &.dplayer-show-controller {
         .dplayer-controller-mask {
             opacity: 1;
         }
         .dplayer-controller {
+            opacity: 1;
+        }
+        .dplayer-title{
             opacity: 1;
         }
     }
@@ -175,7 +194,9 @@
                 display: inline-block;
             }
         }
-
+        .dplayer-title{
+            display: none;
+        }
         .dplayer-bar-time {
             display: none;
         }

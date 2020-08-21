@@ -32,6 +32,7 @@ class Controller {
         this.initHighlights();
         this.initAirplayButton();
         this.goNextVideo();
+        this.followOperate();
         if (!utils.isMobile) {
             this.initVolumeButton();
         }
@@ -67,6 +68,14 @@ class Controller {
         if (this.player.options.video.hasNextVideo) {
             this.player.template.nextVideoButton.addEventListener('click', () => {
                 this.player.options.video.goNextVideo && this.player.options.video.goNextVideo();
+            });
+        }
+    }
+
+    followOperate() {
+        if (this.player.options.video.logo && this.player.options.video.portrait) {
+            this.player.template.followButton.addEventListener('click', () => {
+                this.player.options.video.followOperate&&this.player.options.video.followOperate();
             });
         }
     }

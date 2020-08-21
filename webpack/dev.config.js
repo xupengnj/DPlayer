@@ -93,6 +93,7 @@ module.exports = {
         watchOptions: {
             ignored: /node_modules/,
         },
+        host: '0.0.0.0',
     },
 
     plugins: [
