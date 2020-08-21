@@ -113,7 +113,14 @@
             <div class="dplayer-quality-mask">
                 <div class="dplayer-quality-list">
                 {{ each options.video.quality }}
-                    <div class="dplayer-quality-item" data-index="{{ $index }}">{{ $value.name }}</div>
+                    <div class="dplayer-quality-item" data-index="{{ $index }}">
+                    <div class='dplayer-quality-item-name '>
+                    {{ $value.name }}
+                    </div>
+                    {{if $value.status&&$value.status.status!==0}}
+                    <div class='dplayer-quality-item-status '>{{$value.status===1?'会员':'登录'}}</div>
+                    {{/if}}
+                    </div>
                 {{ /each }}
                 </div>
             </div>
@@ -280,7 +287,7 @@
 <div class='dplayer-title-user'>
 <div class='dplayer-title-user-portrait' style="background-image:url({{options.video.portrait}})"> </div>
 <div class='dplayer-title-user-operate'>
-<span>{{options.video.isFollow?'取消关注':'+ 关注'}}</span>
+<span>{{options.video.isFollow?'取消关注':'+关注'}}</span>
 </div>
 </div>
 </div>

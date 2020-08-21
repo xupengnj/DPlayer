@@ -528,6 +528,10 @@ class DPlayer {
 
     switchQuality(index) {
         index = typeof index === 'string' ? parseInt(index) : index;
+        if ((this.options.video.quality[index].status && this.options.video.quality[index].status === 1) || this.options.video.quality[index].status == 2) {
+            this.options.video.quality[index].goFunction && this.options.video.quality[index].goFunction();
+            return;
+        }
         if (this.qualityIndex === index || this.switchingQuality) {
             return;
         } else {
@@ -535,6 +539,7 @@ class DPlayer {
         }
         this.switchingQuality = true;
         this.quality = this.options.video.quality[index];
+
         this.template.qualityButton.innerHTML = this.quality.name;
 
         const paused = this.video.paused;

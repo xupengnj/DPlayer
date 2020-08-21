@@ -58,7 +58,6 @@ function initPlayers() {
     window.dp1 = new DPlayer({
         container: document.getElementById('dplayer1'),
         preload: 'none',
-        screenshot: true,
         video: {
             url: 'https://v-cdn.zjol.com.cn/276984.mp4',
             pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
@@ -67,17 +66,39 @@ function initPlayers() {
             goNextVideo:()=>console.log('11111'),
             logo:'http://chuantu.xyz/t6/740/1597976899x1700340449.png',
             portrait:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1671247724,3484152546&fm=26&gp=0.jpg',
-            followOperate:()=>console.log('1111')
+            followOperate:()=>console.log('1111'),
+            quality: [
+                {
+                    name: '4K高清',
+                    url: 'https://v-cdn.zjol.com.cn/276984.mp4',
+                    status:1,
+                    goFunction:()=>console.log(2222)
+                },
+                {
+                    name: '1080P',
+                    url: 'https://v-cdn.zjol.com.cn/276984.mp4',
+                    status:2,
+                    goFunction:()=>console.log(23333333)
+                },
+                {
+                    name: '720P',
+                    url: 'https://v-cdn.zjol.com.cn/276984.mp4',
+                
+                },
+                {
+                    name: '360P',
+                    url: 'https://v-cdn.zjol.com.cn/276984.mp4',
+           
+                },
+               
+              
+               
+            ],
+            defaultQuality: 3,
         },
         theme: '#F27878',
-        subtitle: {
-            url: 'https://s-sh-17-dplayercdn.oss.dogecdn.com/hikarunara.vtt'
-        },
-        danmaku: {
-            id: '9E2E3368B56CDBB4',
-            api: 'https://api.prprpr.me/dplayer/',
-            addition: ['https://s-sh-17-dplayercdn.oss.dogecdn.com/1678963.json']
-        }
+  
+  
     });
 
     // dp2
