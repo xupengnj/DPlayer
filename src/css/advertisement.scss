@@ -1,0 +1,40 @@
+.advertisement-skip {
+    position: absolute;
+    top: 29px;
+    right: 30px;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+    padding: 5px 11px;
+    cursor: pointer;
+
+}
+
+.advertisement-skip-vip {
+    position: absolute;
+    bottom: 70px;
+    right: 29px;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    padding: 8px 12px;
+    background-color: rgba(242, 120, 121, 1);
+    border-radius: 17px;
+    cursor: pointer;
+}
+
+.advertisement-skip-tip {
+    position: absolute;
+    bottom: 70px;
+    right: 112px;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 16px;
+}

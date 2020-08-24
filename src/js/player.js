@@ -20,7 +20,7 @@ import HotKey from './hotkey';
 import ContextMenu from './contextmenu';
 import InfoPanel from './info-panel';
 import tplVideo from '../template/video.art';
-
+import advertisement from './advertisement';
 let index = 0;
 const instances = [];
 
@@ -68,6 +68,8 @@ class DPlayer {
         });
 
         this.video = this.template.video;
+
+        this.advertisement = new advertisement(this);
 
         this.bar = new Bar(this.template);
 

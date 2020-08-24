@@ -79,6 +79,7 @@ class Template {
         this.webFullButton = this.container.querySelector('.√');
         this.menu = this.container.querySelector('.dplayer-menu');
         this.menuItem = this.container.querySelectorAll('.dplayer-menu-item');
+        this.qualityBody = this.container.querySelector('.dplayer-quality');
         this.qualityList = this.container.querySelector('.dplayer-quality-list');
         this.camareButton = this.container.querySelector('.dplayer-camera-icon');
         this.airplayButton = this.container.querySelector('.dplayer-airplay-icon');
@@ -100,7 +101,11 @@ class Template {
         this.infoDanmakuId = this.container.querySelector('.dplayer-info-panel-item-danmaku-id .dplayer-info-panel-item-data');
         this.infoDanmakuApi = this.container.querySelector('.dplayer-info-panel-item-danmaku-api .dplayer-info-panel-item-data');
         this.infoDanmakuAmount = this.container.querySelector('.dplayer-info-panel-item-danmaku-amount .dplayer-info-panel-item-data');
+        this.titleBar = this.container.querySelector('.dplayer-title');
         this.followButton = this.container.querySelector('.dplayer-title-user-operate');
+        this.skipAdvertisement = this.container.querySelector('.advertisement-skip');
+        this.joinVip = this.container.querySelector('.advertisement-skip-vip');
+        this.advertisementTip = this.container.querySelector('.advertisement-skip-tip');
     }
 }
 

@@ -351,6 +351,22 @@ class Controller {
     destroy() {
         clearTimeout(this.autoHideTimer);
     }
+
+    hiddenQuality() {
+        this.player.template.qualityBody.style.display = 'none';
+    }
+
+    visibleQuality() {
+        this.player.template.qualityBody.style.display = 'inline-block';
+    }
+
+    hiddenTitleBar() {
+        this.player.template.titleBar.style.display = 'none';
+    }
+
+    visibleTitleBar() {
+        this.player.template.titleBar.style.display = 'flex';
+    }
 }
 
 export default Controller;

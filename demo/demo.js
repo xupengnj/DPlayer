@@ -101,6 +101,9 @@ function initPlayers() {
   
     });
 
+    window.dp1.setting.hiddenSetting();
+    window.dp1.controller.hiddenQuality();
+    window.dp1.controller.hiddenTitleBar();
     // dp2
     window.dp2 = new DPlayer({
         container: document.getElementById('dplayer2'),

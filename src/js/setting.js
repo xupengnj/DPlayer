@@ -125,6 +125,14 @@ class Setting {
 
         this.player.controller.disableAutoHide = true;
     }
+
+    hiddenSetting() {
+        this.player.template.settingButton.style.visibility = 'hidden';
+    }
+
+    visibleSetting() {
+        this.player.template.settingButton.style.visibility = 'visible';
+    }
 }
 
 export default Setting;
