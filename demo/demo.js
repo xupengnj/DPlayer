@@ -97,10 +97,11 @@ function initPlayers() {
             defaultQuality: 3,
         },
         theme: '#F27878',
-        haveAdvertisement:false
+        haveAdvertisement:true
   
   
     });
+
 
     // dp2
     window.dp2 = new DPlayer({

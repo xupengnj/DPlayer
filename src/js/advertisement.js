@@ -10,7 +10,7 @@ class advertisement {
             this.player.controller.hiddenQuality();
             this.player.controller.hiddenTitleBar();
         } else {
-            // this.player.controller.visibleTitleBar();
+            this.player.titlebar.visibleTitleBar();
             this.player.setting.visibleSetting();
             this.hiddenJoinVip();
             this.hiddenSkip();
@@ -21,7 +21,7 @@ class advertisement {
     onSkipClick(click) {
         this.player.template.skipAdvertisement.addEventListener('click', () => {
             if (this.player.options.haveAdvertisement) {
-                // click();
+                click();
             }
         });
     }
@@ -29,7 +29,7 @@ class advertisement {
     onJoinVipClick(click) {
         this.player.template.joinVip.addEventListener('click', () => {
             if (this.player.options.haveAdvertisement) {
-                // click();
+                click();
             }
         });
     }

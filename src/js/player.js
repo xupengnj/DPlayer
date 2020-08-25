@@ -21,6 +21,7 @@ import ContextMenu from './contextmenu';
 import InfoPanel from './info-panel';
 import tplVideo from '../template/video.art';
 import advertisement from './advertisement';
+import TitleBar from './titlebar';
 let index = 0;
 const instances = [];
 
@@ -139,8 +140,9 @@ class DPlayer {
         this.hotkey = new HotKey(this);
 
         this.contextmenu = new ContextMenu(this);
-
-
+     
+        this.titlebar=new TitleBar(this);
+        this.advertisement = new advertisement(this);
         this.initVideo(this.video, (this.quality && this.quality.type) || this.options.video.type);
 
         this.infoPanel = new InfoPanel(this);
@@ -151,7 +153,8 @@ class DPlayer {
 
         index++;
         instances.push(this);
-        this.advertisement = new advertisement(this);
+  
+    
     }
 
     /**

@@ -32,7 +32,6 @@ class Controller {
         this.initHighlights();
         this.initAirplayButton();
         this.goNextVideo();
-        this.followOperate();
         if (!utils.isMobile) {
             this.initVolumeButton();
         }
@@ -72,13 +71,7 @@ class Controller {
         }
     }
 
-    followOperate() {
-        if (this.player.options.video.logo && this.player.options.video.portrait) {
-            this.player.template.followButton.addEventListener('click', () => {
-                this.player.options.video.followOperate && this.player.options.video.followOperate();
-            });
-        }
-    }
+    
 
     initHighlights() {
         this.player.on('durationchange', () => {
@@ -363,16 +356,9 @@ class Controller {
         this.player.template.qualityBody.style.display = 'inline-block';
     }
 
-    hiddenTitleBar() {
-        this.player.template.titleBar.style.display = 'none';
-    }
 
-    visibleTitleBar() {
-        if (this.player.template.titleBar.style && this.player.template.titleBar.style.display) {
-            this.player.template.titleBar.style.display = 'flex';
-        }
 
-    }
+
 }
 
 export default Controller;
