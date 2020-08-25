@@ -69,8 +69,6 @@ class DPlayer {
 
         this.video = this.template.video;
 
-        this.advertisement = new advertisement(this);
-
         this.bar = new Bar(this.template);
 
         this.bezel = new Bezel(this.template.bezel);
@@ -142,6 +140,7 @@ class DPlayer {
 
         this.contextmenu = new ContextMenu(this);
 
+
         this.initVideo(this.video, (this.quality && this.quality.type) || this.options.video.type);
 
         this.infoPanel = new InfoPanel(this);
@@ -152,6 +151,7 @@ class DPlayer {
 
         index++;
         instances.push(this);
+        this.advertisement = new advertisement(this);
     }
 
     /**
@@ -182,7 +182,6 @@ class DPlayer {
      * Play video
      */
     play(fromNative) {
-        console.log(fromNative);
         this.paused = false;
         if (this.video.paused && !utils.isMobile) {
             this.bezel.switch(Icons.play);
@@ -196,9 +195,9 @@ class DPlayer {
             playedPromise
                 .catch((e) => {
                     this.pause();
-                    console.log(e)
+                    console.log(e);
                 })
-                .then(() => {});
+                .then((e) => {});
         }
         this.timer.enable('loading');
         this.container.classList.remove('dplayer-paused');

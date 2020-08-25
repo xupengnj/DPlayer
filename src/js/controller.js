@@ -119,6 +119,9 @@ class Controller {
     }
 
     initPlayedBar() {
+        if (this.player.options.haveAdvertisement) {
+            return;
+        }
         const thumbMove = (e) => {
             let percentage = ((e.clientX || e.changedTouches[0].clientX) - utils.getBoundingClientRectViewLeft(this.player.template.playedBarWrap)) / this.player.template.playedBarWrap.clientWidth;
             percentage = Math.max(percentage, 0);
@@ -365,7 +368,10 @@ class Controller {
     }
 
     visibleTitleBar() {
-        this.player.template.titleBar.style.display = 'flex';
+        if (this.player.template.titleBar.style && this.player.template.titleBar.style.display) {
+            this.player.template.titleBar.style.display = 'flex';
+        }
+
     }
 }
 

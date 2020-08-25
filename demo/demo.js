@@ -58,7 +58,6 @@ function initPlayers() {
     window.dp1 = new DPlayer({
         container: document.getElementById('dplayer1'),
         preload: 'none',
-        autoplay:true,
         video: {
             url: 'https://v-cdn.zjol.com.cn/276984.mp4',
             pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
@@ -98,13 +97,11 @@ function initPlayers() {
             defaultQuality: 3,
         },
         theme: '#F27878',
+        haveAdvertisement:false
   
   
     });
 
-    window.dp1.setting.hiddenSetting();
-    window.dp1.controller.hiddenQuality();
-    window.dp1.controller.hiddenTitleBar();
     // dp2
     window.dp2 = new DPlayer({
         container: document.getElementById('dplayer2'),
