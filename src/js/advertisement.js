@@ -8,7 +8,7 @@ class advertisement {
         if (this.player.options.haveAdvertisement) {
             this.player.setting.hiddenSetting();
             this.player.controller.hiddenQuality();
-            this.player.controller.hiddenTitleBar();
+            this.player.titlebar.hiddenTitleBar();
         } else {
             this.player.titlebar.visibleTitleBar();
             this.player.setting.visibleSetting();
