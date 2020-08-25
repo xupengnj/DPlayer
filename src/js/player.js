@@ -182,6 +182,7 @@ class DPlayer {
      * Play video
      */
     play(fromNative) {
+        console.log(fromNative);
         this.paused = false;
         if (this.video.paused && !utils.isMobile) {
             this.bezel.switch(Icons.play);
@@ -193,8 +194,9 @@ class DPlayer {
         if (!fromNative) {
             const playedPromise = Promise.resolve(this.video.play());
             playedPromise
-                .catch(() => {
+                .catch((e) => {
                     this.pause();
+                    console.log(e)
                 })
                 .then(() => {});
         }

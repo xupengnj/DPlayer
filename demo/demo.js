@@ -58,6 +58,7 @@ function initPlayers() {
     window.dp1 = new DPlayer({
         container: document.getElementById('dplayer1'),
         preload: 'none',
+        autoplay:true,
         video: {
             url: 'https://v-cdn.zjol.com.cn/276984.mp4',
             pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
