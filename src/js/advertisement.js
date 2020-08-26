@@ -9,7 +9,6 @@ class advertisement {
             this.player.setting.hiddenSetting();
             this.player.controller.hiddenQuality();
             this.player.titlebar.hiddenTitleBar();
-            this.visibleSkip();
     }
 }
 
