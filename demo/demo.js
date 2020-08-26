@@ -102,7 +102,6 @@ function initPlayers() {
   
     });
 
-
     // dp2
     window.dp2 = new DPlayer({
         container: document.getElementById('dplayer2'),
@@ -120,7 +119,9 @@ function initPlayers() {
             url: 'https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4',
             pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',
             thumbnails: 'https://i.loli.net/2019/06/06/5cf8c5d9cec8510758.jpg',
-            type: 'auto'
+            type: 'auto',
+            logo:'http://chuantu.xyz/t6/740/1597976899x1700340449.png',
+            portrait:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1671247724,3484152546&fm=26&gp=0.jpg',
         },
         subtitle: {
             url: 'https://s-sh-17-dplayercdn.oss.dogecdn.com/hikarunara.vtt',

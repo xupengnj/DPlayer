@@ -9,22 +9,11 @@ class advertisement {
             this.player.setting.hiddenSetting();
             this.player.controller.hiddenQuality();
             this.player.titlebar.hiddenTitleBar();
-        } else {
-            this.player.titlebar.visibleTitleBar();
-            this.player.setting.visibleSetting();
-            this.hiddenJoinVip();
             this.hiddenSkip();
-            this.hiddenAdTip();
-        }
+            this.visibleSkip();
     }
+}
 
-    onSkipClick(click) {
-        this.player.template.skipAdvertisement.addEventListener('click', () => {
-            if (this.player.options.haveAdvertisement) {
-                click();
-            }
-        });
-    }
 
     onJoinVipClick(click) {
         this.player.template.joinVip.addEventListener('click', () => {
@@ -35,29 +24,29 @@ class advertisement {
     }
 
     hiddenSkip() {
-        this.player.template.skipAdvertisement.style.display = 'none';
+        const skipAdvertisement = document.querySelectorAll('.advertisement-skip');
+        skipAdvertisement&&skipAdvertisement.forEach(item=>(
+            this.player.container.removeChild(item)
+        ))
+ 
+
     }
 
-    visibleSkip() {
-        this.player.template.skipAdvertisement.style.display = 'block';
+    visibleSkip(click) {
+       const skipAdvertisement=document.createElement('div');
+       skipAdvertisement.classList.add('advertisement-skip');
+       skipAdvertisement.innerHTML='跳过'
+       skipAdvertisement.addEventListener('click',()=>{
+        if (this.player.options.haveAdvertisement) {
+            click();
+        }
+       })
+       this.player.container.appendChild(skipAdvertisement);
+
     }
 
-    hiddenJoinVip() {
-        this.player.template.joinVip.style.display = 'none';
-    }
 
-    visibleJoinVip() {
-        this.player.template.joinVip.style.display = 'block';
-    }
-
-    hiddenAdTip() {
-        this.player.template.advertisementTip.style.display = 'none';
-    }
-
-    visibleAdTip() {
-        this.player.template.advertisementTip.style.display = 'block';
-    }
-
+ 
     setAdTip(text) {
         this.player.template.advertisementTip.innerHTML = text;
     }

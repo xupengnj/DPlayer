@@ -292,7 +292,8 @@
 </div>
 </div>
 {{/if}}
-
+{{if options.haveAdvertisement}}
 <div class='advertisement-skip'>跳过</div>
 <div class='advertisement-skip-vip'>加入会员</div>
 <div class='advertisement-skip-tip'></div>
+{{/if}}
