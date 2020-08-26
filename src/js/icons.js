@@ -17,7 +17,12 @@ import subtitle from '../assets/subtitle.svg';
 import loading from '../assets/loading.svg';
 import widthscreen from '../assets/widthscreen.svg';
 import nextvideo from '../assets/nextvideo.svg';
-
+import share from '../assets/share.svg';
+import collection from '../assets/collection.svg'
+import replay from '../assets/replay.svg'
+import zan from '../assets/zan.svg'
+import collectionPink from '../assets/collection_pink.svg';
+import zanPink from '../assets/zan_pink.svg'
 const Icons = {
     play: play,
     pause: pause,
@@ -38,6 +43,12 @@ const Icons = {
     airplay: airplay,
     widthscreen: widthscreen,
     nextvideo: nextvideo,
+    share:share,
+    collection:collection,
+    replay:replay,
+    zan:zan,
+    collectionPink:collectionPink,
+    zanPink:zanPink
 };
 
 export default Icons;

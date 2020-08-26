@@ -296,3 +296,35 @@
 <div class='advertisement-skip-vip'>加入会员</div>
 <div class='advertisement-skip-tip'></div>
 {{/if}}
+
+<div class='recommend'>
+<div class='recommend-info'>
+
+<div class='recommend-info-portrait' style="background-image:url({{options.video.portrait}})" ></div>
+<div class='recommend-info-operate'>
+
+<div class='recommend-info-operate-body'>
+<span>分享</span>
+<div  class='recommend-info-img'>{{@ icons.share}}</div>
+</div>
+
+<div class='recommend-info-operate-body'>
+<span>收藏</span>
+<div  class='recommend-info-img'>{{@ icons.collectionPink}}</div>
+</div>
+
+<div class='recommend-info-operate-body'>
+<span>点赞</span>
+<div  class='recommend-info-img'>{{@ icons.zanPink}}</div>
+</div>
+
+<div class='recommend-info-operate-body'>
+<span>重播</span>
+<div  class='recommend-info-img'>{{@ icons.replay}}</div>
+</div>
+</div>
+
+
+
+</div>
+</div>

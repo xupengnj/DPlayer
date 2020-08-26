@@ -22,6 +22,7 @@ import InfoPanel from './info-panel';
 import tplVideo from '../template/video.art';
 import advertisement from './advertisement';
 import TitleBar from './titlebar';
+import recommend from './recommend';
 let index = 0;
 const instances = [];
 
