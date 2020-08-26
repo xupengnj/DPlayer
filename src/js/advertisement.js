@@ -9,9 +9,8 @@ class advertisement {
             this.player.setting.hiddenSetting();
             this.player.controller.hiddenQuality();
             this.player.titlebar.hiddenTitleBar();
+        }
     }
-}
-
 
     onJoinVipClick(click) {
         this.player.template.joinVip.addEventListener('click', () => {
@@ -23,28 +22,26 @@ class advertisement {
 
     hiddenSkip() {
         const skipAdvertisement = document.querySelectorAll('.advertisement-skip');
-        skipAdvertisement&&skipAdvertisement.forEach(item=>(
-            this.player.container.removeChild(item)
-        ))
- 
-
+        skipAdvertisement && skipAdvertisement.forEach((item) => this.player.container.removeChild(item));
     }
 
     visibleSkip(click) {
-       const skipAdvertisement=document.createElement('div');
-       skipAdvertisement.classList.add('advertisement-skip');
-       skipAdvertisement.innerHTML='跳过'
-       skipAdvertisement.addEventListener('click',()=>{
-        if (this.player.options.haveAdvertisement) {
-            click();
+        const skipAdvertisementA = document.querySelectorAll('.advertisement-skip');
+        if (skipAdvertisementA.length > 0) {
+            return;
         }
-       })
-       this.player.container.appendChild(skipAdvertisement);
-
+ 
+        const skipAdvertisement = document.createElement('div');
+        skipAdvertisement.classList.add('advertisement-skip');
+        skipAdvertisement.innerHTML = '跳过';
+        skipAdvertisement.addEventListener('click', () => {
+            if (this.player.options.haveAdvertisement) {
+                click();
+            }
+        });
+        this.player.container.appendChild(skipAdvertisement);
     }
 
-
- 
     setAdTip(text) {
         this.player.template.advertisementTip.innerHTML = text;
     }
