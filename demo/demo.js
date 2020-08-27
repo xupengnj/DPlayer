@@ -14,6 +14,7 @@ requestAnimationFrame(animate);
 initPlayers();
 handleEvent();
 
+
 function handleEvent() {
     document.getElementById('dplayer-dialog').addEventListener('click', (e) => {
         const $clickDom = e.currentTarget;
@@ -101,8 +102,8 @@ function initPlayers() {
   
   
     });
-    // window.dp1.advertisement.visibleSkip();
-    // dp2
+    window.dp1.recommend.initRecommendList([1,2,3,4,5,6]);
+ 
     window.dp2 = new DPlayer({
         container: document.getElementById('dplayer2'),
         preload: 'none',
