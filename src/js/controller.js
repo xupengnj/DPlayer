@@ -231,6 +231,9 @@ class Controller {
     initQualityButton() {
         if (this.player.options.video.quality) {
             this.player.template.qualityList.addEventListener('click', (e) => {
+                if(this.player.options.haveAdvertisement){
+                    return;
+                }
                 if (e.target.classList.contains('dplayer-quality-item')) {
                     this.player.switchQuality(e.target.dataset.index);
                 }

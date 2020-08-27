@@ -306,22 +306,22 @@
 
 <div class='recommend-info-operate'>
 
-<div class='recommend-info-operate-body'>
+<div class='recommend-info-operate-body recommend-info-operate-body-share'>
 <span>分享</span>
 <div  class='recommend-info-img'>{{@ icons.share}}</div>
 </div>
 
-<div class='recommend-info-operate-body'>
+<div class='recommend-info-operate-body recommend-info-operate-body-collection'>
 <span>收藏</span>
-<div  class='recommend-info-img'>{{@ icons.collectionPink}}</div>
+<div  class='recommend-info-img collection-icon'>{{@ icons.collection}}</div>
 </div>
 
-<div class='recommend-info-operate-body'>
+<div class='recommend-info-operate-body recommend-info-operate-body-zan'>
 <span>点赞</span>
-<div  class='recommend-info-img'>{{@ icons.zanPink}}</div>
+<div  class='recommend-info-img zan-icon'>{{@ icons.zan}}</div>
 </div>
 
-<div class='recommend-info-operate-body'>
+<div class='recommend-info-operate-body recommend-info-operate-body-replay'>
 <span>重播</span>
 <div  class='recommend-info-img'>{{@ icons.replay}}</div>
 </div>

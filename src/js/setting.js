@@ -66,6 +66,9 @@ class Setting {
         });
         for (let i = 0; i < this.player.template.speedItem.length; i++) {
             this.player.template.speedItem[i].addEventListener('click', () => {
+                if(this.player.options.haveAdvertisement){
+                    return;
+                }
                 this.player.speed(this.player.template.speedItem[i].dataset.speed);
                 this.hide();
             });

@@ -102,8 +102,9 @@ function initPlayers() {
   
   
     });
-    window.dp1.recommend.initRecommendList([1,2,3,4,5,6]);
- 
+    // window.dp1.recommend.initRecommendList([1,2,3,4,5,6],()=>console.log(5656565));
+    // window.dp1.recommend.setRecommendVisible();
+    // window.dp1.recommend.setRecommendHidden();
     window.dp2 = new DPlayer({
         container: document.getElementById('dplayer2'),
         preload: 'none',

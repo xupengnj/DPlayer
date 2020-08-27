@@ -106,6 +106,13 @@ class Template {
         this.skipAdvertisement = this.container.querySelector('.advertisement-skip');
         this.joinVip = this.container.querySelector('.advertisement-skip-vip');
         this.advertisementTip = this.container.querySelector('.advertisement-skip-tip');
+        this.zanIcon = this.container.querySelector('.zan-icon');
+        this.collectionIcon = this.container.querySelector('.collection-icon');
+        this.collectionButton =  this.container.querySelector('.recommend-info-operate-body-collection')
+        this.shareButton=this.container.querySelector('.recommend-info-operate-body-share');
+        this.zanButton=this.container.querySelector('.recommend-info-operate-body-zan');
+        this.replayButton=this.container.querySelector('.recommend-info-operate-body-replay');
+        this.recommendBody=this.container.querySelector('.recommend');
     }
 }
 
