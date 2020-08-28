@@ -113,6 +113,8 @@ class Template {
         this.zanButton=this.container.querySelector('.recommend-info-operate-body-zan');
         this.replayButton=this.container.querySelector('.recommend-info-operate-body-replay');
         this.recommendBody=this.container.querySelector('.recommend');
+        this.recommendPortrait=this.container.querySelector('.recommend-info-portrait');
+        this.recommendFollow=this.container.querySelector('.recommend-info-follow');
     }
 }
 

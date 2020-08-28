@@ -98,14 +98,16 @@ function initPlayers() {
             defaultQuality: 3,
         },
         theme: '#F27878',
-        haveAdvertisement:true
+        haveAdvertisement:false
   
   
     });
-    // window.dp1.recommend.initRecommendList([1,2,3,4,5,6],()=>console.log(5656565));
-    // window.dp1.recommend.setRecommendVisible();
-    // window.dp1.recommend.setRecommendHidden();
-
+    window.dp1.recommend.setRecommendVisible();
+    window.dp1.recommend.initRecommendList(
+        [{"author_name":"乐顺U的你","fantype":1,"id":1,"imageurl":"https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1913214116,3912663704&fm=26&gp=0.jpg","paynum":32,"paystate":1,"state":3,"timelong":1402,"title":"乐顺U的你","secondd":0,"created_at":1597743731,"url":0,"ratio":360,"url_adver":"","jump_time":0,"url_720":"","url_360":"","like_num":9,"see_num":991},{"author_name":"发生生那阿","fantype":1,"id":4,"imageurl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596536775950&di=48039877414db9c022b3d240b10ed2e7&imgtype=0&src=http%3A%2F%2Fmedia-cdn.tripadvisor.com%2Fmedia%2Fphoto-s%2F07%2F96%2Faf%2F8a%2Ftup-island.jpg","paynum":0,"paystate":0,"state":1,"timelong":2985,"title":"发生生那阿","secondd":1,"created_at":1597743731,"url":0,"ratio":720,"url_adver":"","jump_time":0,"url_720":"","url_360":"","like_num":85,"see_num":742},{"author_name":"啊哦啊I生","fantype":1,"id":7,"imageurl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596536775949&di=7ef970c6ceeb58a41088eedd67766fb4&imgtype=0&src=http%3A%2F%2Fac-r.static.booking.cn%2Fimages%2Fhotel%2Fmax1024x768%2F175%2F17552265.jpg","paynum":0,"paystate":0,"state":0,"timelong":2643,"title":"啊哦啊I生","secondd":0,"created_at":1597743731,"url":0,"ratio":720,"url_adver":"","jump_time":0,"url_720":"","url_360":"","like_num":77,"see_num":98},{"author_name":"顺年啊那I","fantype":1,"id":9,"imageurl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596536775948&di=bda4209dfcf7479d568e023565f87aa8&imgtype=0&src=http%3A%2F%2Fac-q.static.booking.cn%2Fimages%2Fhotel%2Fmax1024x768%2F111%2F111145521.jpg","paynum":76,"paystate":1,"state":1,"timelong":2709,"title":"顺年啊那I","secondd":0,"created_at":1597743731,"url":0,"ratio":720,"url_adver":"","jump_time":0,"url_720":"","url_360":"","like_num":183,"see_num":466},{"author_name":"了发发看发","fantype":0,"id":12,"imageurl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596536986772&di=a4981ae416382c36e66312d09c605a2d&imgtype=0&src=http%3A%2F%2Fwww.51modo.cc%2Fupload%2Fkindeditor%2Fimage%2F20150301%2F20150301163748_86896.jpg","paynum":75,"paystate":1,"state":0,"timelong":905,"title":"了发发看发","secondd":1,"created_at":1597743731,"url":0,"ratio":720,"url_adver":"","jump_time":0,"url_720":"","url_360":"","like_num":0,"see_num":808},{"author_name":"生哪顺偶哦","fantype":1,"id":20,"imageurl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596534849532&di=23bb46b803b7c3713ba65d5d517279fe&imgtype=0&src=http%3A%2F%2Fa3.att.hudong.com%2F14%2F75%2F01300000164186121366756803686.jpg","paynum":0,"paystate":0,"state":0,"timelong":6,"title":"生哪顺偶哦","secondd":1,"created_at":1597743731,"url":0,"ratio":360,"url_adver":"","jump_time":0,"url_720":"","url_360":"","like_num":85,"see_num":205}]
+    );
+    window.dp1.recommend.setRecommendFollow('+ 关注17万');
+    window.dp1.recommend.setRecommendPortrait('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1913214116,3912663704&fm=26&gp=0.jpg')
     window.dp2 = new DPlayer({
         container: document.getElementById('dplayer2'),
         preload: 'none',

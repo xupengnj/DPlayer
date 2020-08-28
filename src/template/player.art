@@ -304,8 +304,8 @@
 <div class='recommend'>
 <div class='recommend-info'>
 <div class='recommend-info-left'>
-<div class='recommend-info-portrait' style="background-image:url({{options.video.portrait}})" ></div>
-<div class='recommend-info-follow '>+   关注17万</div>
+<div class='recommend-info-portrait'></div>
+<div class='recommend-info-follow '></div>
 </div>
 
 <div class='recommend-info-operate'>

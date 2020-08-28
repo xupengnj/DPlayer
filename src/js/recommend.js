@@ -4,21 +4,30 @@ class Recommend {
         this.player = player;
     }
 
-    initRecommendList(recommendList,click) {
+    initRecommendList(recommendList, click) {
         const list = this.player.container.querySelector('.recommend-list');
+        list.innerHTML = '';
         recommendList &&
             recommendList.forEach((aa) => {
                 const item = document.createElement('div');
                 item.classList.add('recommend-list-item');
-                item.style.backgroundImage = 'url(https://upload-images.jianshu.io/upload_images/5809200-736bc3917fe92142.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)';
+                item.style.backgroundImage = `url(${aa.imageurl})`;
                 const itemBody = document.createElement('span');
-                itemBody.innerHTML = '奥术大师大所';
+                itemBody.innerHTML = aa.title;
                 item.appendChild(itemBody);
-                item.addEventListener('click',()=>{
-                    click&&click();
-                })
+                item.addEventListener('click', () => {
+                    click && click();
+                });
                 list.appendChild(item);
             });
+    }
+
+    setRecommendPortrait(url) {
+        this.player.template.recommendPortrait.style.backgroundImage = `url(${url})`;
+    }
+
+    setRecommendFollow(text) {
+        this.player.template.recommendFollow.innerHTML = text;
     }
 
     setZanIcon(isZan, click) {
@@ -61,7 +70,7 @@ class Recommend {
         this.player.titlebar.hiddenTitleBar();
     }
 
-    setRecommendHidden(){
+    setRecommendHidden() {
         this.player.template.recommendBody.style.display = 'none';
         this.player.titlebar.visibleTitleBar();
     }
