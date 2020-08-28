@@ -20,30 +20,20 @@ class advertisement {
         });
     }
 
-    hiddenSkip() {
-        const skipAdvertisement = document.querySelectorAll('.advertisement-skip');
-        skipAdvertisement && skipAdvertisement.forEach((item) => this.player.container.removeChild(item));
-    }
-
-    visibleSkip(click) {
-        const skipAdvertisementA = document.querySelectorAll('.advertisement-skip');
-        if (skipAdvertisementA.length > 0) {
+    setSkipFunction(click) {
+        if (!this.player.options.haveAdvertisement) {
             return;
         }
- 
-        const skipAdvertisement = document.createElement('div');
-        skipAdvertisement.classList.add('advertisement-skip');
-        skipAdvertisement.innerHTML = '跳过';
-        skipAdvertisement.addEventListener('click', () => {
-            if (this.player.options.haveAdvertisement) {
-                click();
-            }
+        this.player.template.skipAdvertisement.addEventListener('click', () => {
+            click && click();
         });
-        this.player.container.appendChild(skipAdvertisement);
     }
 
-    setAdTip(text) {
-        this.player.template.advertisementTip.innerHTML = text;
+    setSkipVip(text) {
+        if (!this.player.options.haveAdvertisement) {
+            return;
+        }
+        this.player.template.skipAdvertisement.innerHTML = text;
     }
 }
 

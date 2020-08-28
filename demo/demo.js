@@ -98,13 +98,14 @@ function initPlayers() {
             defaultQuality: 3,
         },
         theme: '#F27878',
-        haveAdvertisement:false
+        haveAdvertisement:true
   
   
     });
     // window.dp1.recommend.initRecommendList([1,2,3,4,5,6],()=>console.log(5656565));
     // window.dp1.recommend.setRecommendVisible();
     // window.dp1.recommend.setRecommendHidden();
+
     window.dp2 = new DPlayer({
         container: document.getElementById('dplayer2'),
         preload: 'none',

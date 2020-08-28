@@ -294,7 +294,11 @@
 {{/if}}
 {{if options.haveAdvertisement}}
 <div class='advertisement-skip-vip'>加入会员</div>
-<div class='advertisement-skip-tip'></div>
+<div class='advertisement-skip-tip'>加入会员立即跳过广告</div>
+{{/if}}
+
+{{if options.haveAdvertisement}}
+<div class='advertisement-skip'></div>
 {{/if}}
 
 <div class='recommend'>
